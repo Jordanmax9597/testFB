@@ -189,11 +189,14 @@ class create:
                 email = mail['mail']
                 session = mail['session']
             except KeyError:
+                print(KeyError)
                 pass
             except requests.exceptions.ConnectionError:
+                print(requests.exceptions.ConnectionError)
                 time.sleep(1)
                 pass
             except Exception as e:
+                print(e)
                 pass
             passw = name[0]+name[1]+str(random.randint(111,999))
             try:
@@ -254,7 +257,7 @@ class create:
                 cok = self.ses.cookies.get_dict()
                 if 'checkpoint' in getts.url:
                     cp.append(email+passw)
-                    print ('\r\033[1;92m (ANISH-OK - checkpoint) '+cok['c_user']+' | '+passw+'\033[1;92m ')
+                    print('\r\033[1;92m (ANISH-OK - checkpoint) '+cok['c_user']+' | '+passw+'\033[1;92m ')
                     print(f"\r\r\033[1;96m (COOKIE) = "+coki)
                     open('ANISH_REGISTERED_OK_CHECPOINT.txt', 'a').write(f"{uid}|{ps}|{coki}\n")
                 dbl = ['fb_dtsg', 'jazoest', 'flow', 'next', 'nux_source']
@@ -282,7 +285,7 @@ class create:
                                 if 'checkpoint' in rex.url:
                                     cok = self.ses.cookies.get_dict()
                                     cp.append(email+passw)
-                                    print ('\r\033[1;92m (ANISH-OK) '+cok['c_user']+' | '+passw+'\033[1;92m ')
+                                    print('\r\033[1;92m (ANISH-OK) '+cok['c_user']+' | '+passw+'\033[1;92m ')
                                     print(f"\r\r\033[1;96m (COOKIE) = "+coki)
                                     open('ANISH_REGISTERED_OK_CHECPOINT.txt', 'a').write(f"{uid}|{ps}|{coki}\n")
                                 else:
@@ -293,9 +296,11 @@ class create:
                                     open('ANISH_REGISTERED_OK.txt', 'a').write(f"{uid}|{ps}|{coki}\n")
                                     ok.append(email+passw)
             except requests.exceptions.ConnectionError:
+                print(requests.exceptions.ConnectionError)
                 time.sleep(1)
                 pass
             except Exception as e:
+                print(e)
                 pass
         print ('PROCESS HAS BEEN COMPLETED')
         print (47*'-')
