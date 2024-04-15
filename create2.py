@@ -284,7 +284,7 @@ class create:
                                     cp.append(email+passw)
                                     print ('\r\033[1;92m (ANISH-OK) '+cok['c_user']+' | '+passw+'\033[1;92m ')
                                     print(f"\r\r\033[1;96m (COOKIE) = "+coki)
-                                    open('ANISH_REGISTERED_OK.txt', 'a').write(f"{uid}|{ps}|{coki}\n")
+                                    open('ANISH_REGISTERED_OK_CHECPOINT.txt', 'a').write(f"{uid}|{ps}|{coki}\n")
                                 else:
                                     coki = (";").join([ "%s=%s" % (key, value) for key, value in self.ses.cookies.get_dict().items() ])
                                     cok = self.ses.cookies.get_dict()
