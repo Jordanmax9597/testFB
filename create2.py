@@ -1,4 +1,4 @@
-import os, sys, re, requests, bs4, time, random, json, string
+import os, sys, re, requests, bs4, time, random, json, string, time
 from bs4 import BeautifulSoup
 from datetime import datetime
 import os
@@ -173,6 +173,9 @@ class create:
         OO = '\033[0;97m'
         for x in range(lim):
             self.loop += 1
+            if ( self.loop != 1 ):
+                print('Sleep 30')
+                time.sleep(30)
             sys.stdout.write(f'\r {OO}(ANISH-GOD) {OO}{self.loop}/{str(lim)} OK:\033[1;92m{len(cp)} '),
             sys.stdout.flush()
             if 'boy' in self.gender:
@@ -189,14 +192,14 @@ class create:
                 email = mail['mail']
                 session = mail['session']
             except KeyError:
-                print(KeyError)
+#                 print(KeyError)
                 pass
             except requests.exceptions.ConnectionError:
-                print(requests.exceptions.ConnectionError)
+#                 print(requests.exceptions.ConnectionError)
                 time.sleep(1)
                 pass
             except Exception as e:
-                print(e)
+#                 print(e)
                 pass
             passw = name[0]+name[1]+str(random.randint(111,999))
             try:
@@ -258,7 +261,6 @@ class create:
                 if 'checkpoint' in getts.url:
                     cp.append(email+passw)
                     print('\r\033[1;92m (ANISH-OK - checkpoint) '+cok['c_user']+' | '+passw+'\033[1;92m ')
-                    print(f"\r\r\033[1;96m (COOKIE) = "+coki)
                     open('ANISH_REGISTERED_OK_CHECPOINT.txt', 'a').write(f"{uid}|{ps}|{coki}\n")
                 dbl = ['fb_dtsg', 'jazoest', 'flow', 'next', 'nux_source']
                 for x in BeautifulSoup(getts.text, 'html.parser').find_all('form', {'method': 'post'}):
@@ -285,8 +287,7 @@ class create:
                                 if 'checkpoint' in rex.url:
                                     cok = self.ses.cookies.get_dict()
                                     cp.append(email+passw)
-                                    print('\r\033[1;92m (ANISH-OK) '+cok['c_user']+' | '+passw+'\033[1;92m ')
-                                    print(f"\r\r\033[1;96m (COOKIE) = "+coki)
+                                    print('\r\033[1;92m (ANISH-OK-  checkpoint) '+cok['c_user']+' | '+passw+'\033[1;92m ')
                                     open('ANISH_REGISTERED_OK_CHECPOINT.txt', 'a').write(f"{uid}|{ps}|{coki}\n")
                                 else:
                                     coki = (";").join([ "%s=%s" % (key, value) for key, value in self.ses.cookies.get_dict().items() ])
@@ -296,11 +297,11 @@ class create:
                                     open('ANISH_REGISTERED_OK.txt', 'a').write(f"{uid}|{ps}|{coki}\n")
                                     ok.append(email+passw)
             except requests.exceptions.ConnectionError:
-                print(requests.exceptions.ConnectionError)
+#                 print(requests.exceptions.ConnectionError)
                 time.sleep(1)
                 pass
             except Exception as e:
-                print(e)
+#                 print(e)
                 pass
         print ('PROCESS HAS BEEN COMPLETED')
         print (47*'-')
