@@ -174,8 +174,8 @@ class create:
         for x in range(lim):
             self.loop += 1
             if ( self.loop != 1 ):
-                print('Sleep 30')
-                time.sleep(30)
+                print('Sleep 10')
+                time.sleep(10)
             sys.stdout.write(f'\r {OO}(ANISH-GOD) {OO}{self.loop}/{str(lim)} OK:\033[1;92m{len(cp)} '),
             sys.stdout.flush()
             if 'boy' in self.gender:
