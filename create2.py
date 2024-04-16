@@ -146,7 +146,7 @@ class create:
     'sec-fetch-site': 'none',
     'sec-fetch-user': '?1',
     'upgrade-insecure-requests': '1',
-    'user-agent': 'Mozilla/5.0 (Linux; Android 10; K) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Mobile Safari/537.36'}
+    'user-agent': 'Mozilla/5.0 (Linux; U; Android 7.0; Xperia V Build/NDE63X) AppleWebKit/536.13 (KHTML, like Gecko) Chrome/54.0.1748.268 Mobile Safari/603.3'}
 
         headers1 = {
      'authority': 'mbasic.facebook.com/',
@@ -168,7 +168,7 @@ class create:
     'sec-fetch-site': 'none',
     'sec-fetch-user': '?1',
     'upgrade-insecure-requests': '1',
-    'user-agent': 'Mozilla/5.0 (Linux; Android 10; K) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Mobile Safari/537.36'}
+    'user-agent': 'Mozilla/5.0 (Linux; U; Android 5.0.2; Nokia 1100 wifi Build/GRK39F) AppleWebKit/601.34 (KHTML, like Gecko) Chrome/49.0.3632.275 Mobile Safari/535.9'}
 
         OO = '\033[0;97m'
         for x in range(lim):
